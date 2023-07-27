@@ -1,9 +1,9 @@
-export function Card({ id, title, status, date }) {
+export function Card(props) {
     return (
-        <div key={id}>
-            <input type="checkbox" />
-            <p>{title}</p>
-            <small>{date}</small>
+        <div>
+            <input type="checkbox" checked={props.item.status} onChange={() => props.toggleStatus(props.item)} />
+            <p>{props.item.title}</p>
+            <small>{props.item.date}</small>
         </div>
     )
 }

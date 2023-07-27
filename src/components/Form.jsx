@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import DB from '../utils/storage';
 
 export function Form ({ newTask }){
 
@@ -7,6 +6,7 @@ export function Form ({ newTask }){
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(!task) return alert("Task is empty")
         newTask(task)
         setTask("")
     }
@@ -18,7 +18,7 @@ export function Form ({ newTask }){
     return (
         <form onSubmit={ handleSubmit }>
             <label htmlFor="Task">Task</label>
-            <textarea placeholder="Add task..." onChange={ handleInputChange } value={ task }></textarea>
+            <textarea placeholder="Add task..." onChange={ handleInputChange } value={ task } maxLength={140}></textarea>
             <button type="submit" >SAVE</button>
         </form>
     )
