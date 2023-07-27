@@ -33,12 +33,17 @@ function App() {
     setList(updatedList)
   }
 
+  function deleteTask(t) {
+    const updatedList = list.filter(item => item.id !== t.id)
+    setList(updatedList)
+  }
+
   return (
     <>
       <Form newTask={newTask} />
       {
         list.map((item) => (
-          <Card key={item.id} item={item} toggleStatus={toggleStatus} />
+          <Card key={item.id} item={item} toggleStatus={toggleStatus} deleteTask={deleteTask} />
         ))
       }
     </>
