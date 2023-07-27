@@ -1,84 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top has-navbar-fixed-button">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="MyDay is a task management app to help you stay organized and manage your day-to-day.">
-    <meta name="keywords" content="Task managemen, Reminders, Take notes">
-    <meta name="author" content="threevanny">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico">
-    <link rel="stylesheet" href="src/css/app.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyDay: task management</title>
-</head>
-<body>
-    <header class="">
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-           <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                	<img src="src/assets/logo.png" alt="MyDay: task management app to help you stay organized and manage your day-to-day." width="112" height="28">
-                </a>
-            
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
-              </div>
-              <div class="navbar-end">
-                  <div class="navbar-item">
-                      <p id="date"></p>
-                  </div>
-              </div>
-           </div>
-          </nav>
-    </header>
-    <div class="container mt-3">
-      <div class="columns is-mobile">
-        <div class="column is-three-fifths">
-            <main id="task">
-                
-            </main>
-        </div>
-		<div class="column">
-			<div class="panel">
-				<p class="panel-heading">
-					Add task
-				</p>
-				
-					<div class="panel-block">
-						<input class="input is-large" id="content" type="text" placeholder="Add task" maxlength="64" autocomplete="false">
-					</div>
-					
-					<div class="panel-block">
-						<div class="control">
-							<label class="radio">
-								<input type="radio" name="priority" value="Low" checked>
-								Low
-							</label>
-							<label class="radio">
-								<input type="radio" name="priority" value="Moderate">
-								Moderate
-							</label>
-							<label class="radio">
-								<input type="radio" name="priority" value="High">
-								High
-							</label>
-						</div>
-					</div>
-	
-					<div class="panel-block">
-						<button class="button is-success is-outlined is-fullwidth" id="add">
-						  SAVE
-						</button>
-					</div>
-          <a class="p-5 has-text-danger" id="cleardb"><small>Delete All</small></a>
-				
-			</div>
-		</div>
-      </div>
-    </div>
-    <script src="src/js/app.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
