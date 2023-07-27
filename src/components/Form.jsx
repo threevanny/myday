@@ -17,9 +17,14 @@ export function Form ({ newTask }){
 
     return (
         <form onSubmit={ handleSubmit }>
-            <label htmlFor="Task">Task</label>
-            <textarea placeholder="Add task..." onChange={ handleInputChange } value={ task } maxLength={140}></textarea>
-            <button type="submit" >SAVE</button>
+            <textarea 
+                placeholder="Add task..." onChange={ handleInputChange } value={ task } maxLength={140}
+                className='bg-yellow-100 w-full h-40 p-2 rounded-md border-2 border-grey-400 mb-4 focus:outline-none'
+            ></textarea>
+            <button type="submit" className='h-10 w-full px-6 font-semibold rounded-md bg-green-500 text-white hover:bg-green-600' >SAVE</button>
+            <div className='text-gray-300 mt-4 text-center'>
+                <a href="https://github.com/threevanny/myday" target='_blank'><small className='hover:text-green-500'>GitHub</small></a>
+            </div>
         </form>
     )
 }
