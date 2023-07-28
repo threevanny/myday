@@ -7,7 +7,7 @@ import DB from './utils/storage'
 
 function App() {
 
-  const [list, setList] = useState(() =>{
+  const [list, setList] = useState(() => {
     return  DB.read() ?? [] // {id: "5cDhUH" title: "Execute order 66", status: false, date: "7/27/2023, 10:50:52 AM"}
   }) 
   const [date, setDate] = useState('')
@@ -56,17 +56,13 @@ function App() {
               <Form newTask={newTask} />
           </aside>
           <main className="md:w-2/3 lg:w-3/4 p-4">
-            {
-              list.map((item) => (
-                <Card key={item.id} item={item} toggleStatus={toggleStatus} deleteTask={deleteTask} />
-              ))
-            }
+            <div className='grid gap-x-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3'>
+              {
+                list.map((item) => ( <Card key={item.id} item={item} toggleStatus={toggleStatus} deleteTask={deleteTask} /> ))
+              }
+            </div>
           </main>
       </div>
-
-      {/* <footer className="bg-slate-800 mt-auto">
-          <h1 className="text-2xl md:text-4xl text-white">Footer</h1>
-      </footer> */}
     </>
   )
 }
