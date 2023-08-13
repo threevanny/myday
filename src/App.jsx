@@ -47,16 +47,16 @@ function App() {
 
   return (
     <>
-      <header className="bg-white p-5">
+      <header className="bg-gray-50 p-5 shadow-md">
           <Navbar date={date} />
       </header>
 
-      <div className="bg-white w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-          <aside className="md:w-1/3 lg:w-1/4 p-4">
-              <Form newTask={newTask} />
-          </aside>
-          <main className="md:w-2/3 lg:w-3/4 p-4">
-            <div className='grid gap-x-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3'>
+      <div className="py-5 px-80">
+          <section className="mb-5">
+            <Form newTask={newTask} />
+          </section>
+          <main className="">
+            <div className="">
               {
                 list.map((item) => ( <Card key={item.id} item={item} toggleStatus={toggleStatus} deleteTask={deleteTask} /> ))
               }
